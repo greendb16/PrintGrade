@@ -1,7 +1,7 @@
 
 
 
-import com.sun.org.apache.xpath.internal.SourceTree;
+
 
 import java.util.Scanner;
 
@@ -9,13 +9,11 @@ import java.util.Scanner;
 public class PrintGrades {
     public static void main(String []args) {
         Scanner keyboard = new Scanner(System.in);
-
+//prompt input
         String answer;
         System.out.println(" Please Enter an Exam Score: ");
         int score = keyboard.nextInt();
-        while(score !=0)
-            {
-
+        while(score !=0) {
                 if (score < 60) {
                     System.out.println("Go back to school");
                 }
@@ -54,13 +52,25 @@ public class PrintGrades {
                 }
                 System.out.println("Would you like to enter another score? : ");
                 answer = keyboard.next();
-                if(answer.equalsIgnoreCase("yes")){
+                if(answer.equalsIgnoreCase("yes")) {
+                    System.out.println(" Please Enter an Exam Score: ");
+                    score = keyboard.nextInt();
 
-                    break;}
-                    else {score = 0;}
+
+
+                }
+
+                    else {
+                    System.out.println("Goodbye");
+
+                    break;
+                }
             }
+
         }
-    }
+        }
+
+
 
 
 
